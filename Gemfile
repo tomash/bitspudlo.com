@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '3.0.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -25,6 +25,11 @@ gem 'thin'
 # gem 'aws-s3', :require => 'aws/s3'
 
 gem 'spree', :git => 'git://github.com/spree/spree.git'
+
+gem "i18n"
+gem "globalize3"
+gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git'
+
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
