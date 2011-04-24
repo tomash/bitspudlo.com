@@ -22,10 +22,10 @@ namespace :import do
         else
           taxon.parent_id = imported_category['parent_id']
         end
-        taxon.name = imported_category['name']
+        #taxon.name = imported_category['name']
         taxon.name_pl = imported_category['name_pl']
         taxon.name_en = imported_category['name_en']
-        taxon.description = imported_category['description']
+        #taxon.description = imported_category['description']
         taxon.description_pl = imported_category['description_pl']
         taxon.description_en = imported_category['description_en']
         taxon.save
@@ -51,14 +51,20 @@ namespace :import do
         product.cost_price = imported_product['our_cost_netto']
         product.sku = imported_product['code']
         product.count_on_hand = imported_product['in_stock']
-        product.name = imported_product['title']
+        #product.name = imported_product['title']
         product.name_pl = imported_product['title_pl']
         product.name_en = imported_product['title_en']
-        product.description = imported_product['description']
+        #product.description = imported_product['description']
         product.description_pl = imported_product['description_pl']
         product.description_en = imported_product['description_en']
-        #taxon.save
-        puts "#{product.inspect} -- #{product.master.inspect}"
+        
+        product.save
+        taxon = Taxon.find_by_id(imported_product['category_id'])
+        if(taxon)
+          product.taxons << taxon 
+        else
+          putc 'e'
+        end
       end
       puts "done!"
     end
