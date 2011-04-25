@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/pronix/spree-multi-currency.git
+  revision: 7fc06849629e20929a9c22b3eb2e0fb4e1b5189f
+  specs:
+    multi_currencies (1.0.2)
+      json (>= 1.5.1)
+      money (>= 3.6.1)
+      nokogiri (>= 1.4.4)
+      spree_core (>= 0.30.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: abc9075ec533437038f5dd43658e19c3a4449e4a
   specs:
@@ -115,6 +125,7 @@ GEM
     jquery-rails (0.2.6)
       rails (~> 3.0)
       thor (~> 0.14.4)
+    json (1.5.1)
     mail (2.2.17)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -126,6 +137,8 @@ GEM
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
     mime-types (1.16)
+    money (3.6.1)
+      i18n (~> 0.4)
     mysql2 (0.2.7)
     nested_set (1.6.4)
       activerecord (>= 3.0.0)
@@ -137,6 +150,7 @@ GEM
     net-ssh (2.0.23)
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
+    nokogiri (1.4.4)
     orm_adapter (0.0.4)
     paperclip (2.3.8)
       activerecord
@@ -189,7 +203,9 @@ DEPENDENCIES
   globalize3
   globalize_spree!
   i18n
+  multi_currencies!
   mysql2
+  nokogiri
   rails (= 3.0.7)
   spree!
   thin

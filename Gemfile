@@ -31,6 +31,8 @@ gem "i18n"
 gem "globalize3"
 gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git'
 
+gem "nokogiri"
+gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
