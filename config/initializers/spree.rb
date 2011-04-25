@@ -21,4 +21,4 @@ Spree::Config.set(:allow_ssl_in_production => false)
 Spree::Config.set(:products_per_page => 24)
 Spree::Config.set(:allow_backorders => false)
 
-I18n.locale = :pl
+I18n.locale = :en

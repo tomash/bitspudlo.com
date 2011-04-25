@@ -3,6 +3,8 @@ namespace :import do
     
     desc 'import categories from JSON file'
     task :categories => [:environment] do
+      I18n.locale = :en # use _en fields as the 'unglobalized' ones
+      
       if(ARGV[1].blank?)
         puts "ERROR: need path to JSON file for loading"
         abort
@@ -54,11 +56,24 @@ namespace :import do
         #product.name = imported_product['title']
         product.name_pl = imported_product['title_pl']
         product.name_en = imported_product['title_en']
+        product.name = imported_product['title_en']
         #product.description = imported_product['description']
         product.description_pl = imported_product['description_pl']
         product.description_en = imported_product['description_en']
+        product.description = imported_product['description_en']
+        product.available_on = Time.now - 5.days
         
         product.save
+        
+        # image
+        if(File.exist?(imported_product['full_image_path']))
+          i = Image.new
+          i.viewable = product
+          i.attachment = File.open(imported_product['full_image_path'])
+          i.save
+        end
+        
+        # category assignment
         taxon = Taxon.find_by_id(imported_product['category_id'])
         if(taxon)
           product.taxons << taxon 
