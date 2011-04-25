@@ -27,9 +27,11 @@ namespace :import do
         #taxon.name = imported_category['name']
         taxon.name_pl = imported_category['name_pl']
         taxon.name_en = imported_category['name_en']
+        taxon.name    = imported_category['name_en']
         #taxon.description = imported_category['description']
         taxon.description_pl = imported_category['description_pl']
         taxon.description_en = imported_category['description_en']
+        taxon.description    = imported_category['description_en']
         taxon.save
       end
       puts "done!"
