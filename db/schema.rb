@@ -244,6 +244,15 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
     t.string   "display_on"
   end
 
+  create_table "payment_notifications", :force => true do |t|
+    t.text     "params"
+    t.string   "status"
+    t.string   "transaction_id"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "payments", :force => true do |t|
     t.integer  "order_id"
     t.datetime "created_at"
