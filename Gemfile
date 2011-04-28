@@ -25,6 +25,7 @@ gem 'capistrano-ext'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
+# spree-related gems:
 gem 'spree', :git => 'git://github.com/spree/spree.git'
 
 gem "i18n"
@@ -33,6 +34,8 @@ gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git'
 
 gem "nokogiri"
 gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
+
+gem "pp_website_standard", :git => "git://github.com/tomash/spree-pp-website-standard.git"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

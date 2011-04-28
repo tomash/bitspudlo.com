@@ -1,0 +1,6 @@
+paypal:
+  account: "topast_1288948251_biz@o2.pl" 
+  ipn_notify_host: "http://thirster.bitspudlo.com"
+  success_url: "http://localhost:3000/paypal/confirm"
+  sandbox_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_url: "https://www.paypal.com/cgi-bin/webscr"
