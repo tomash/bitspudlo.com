@@ -5,6 +5,7 @@ module SpreeSite
       Order.class_eval do
         def generate_order_number
           self.number = self.id
+          self.id
         end
       end
       
