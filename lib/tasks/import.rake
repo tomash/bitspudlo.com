@@ -90,5 +90,29 @@ namespace :import do
       end
       puts "done!"
     end
+    
+    desc 'fix products categories from JSON file'
+    task :products_categories => [:environment] do
+      if(ARGV[1].blank?)
+        puts "ERROR: need path to JSON file for loading"
+        abort
+      end
+      json_file = File.open(ARGV[1])
+      imported_products = ActiveSupport::JSON.decode(json_file.read)
+      imported_products.sort_by{|ic| ic['id']}.each do |imported_product|
+        product = Product.find_by_id(imported_product['id'])
+        next if(product.nil?)
+        putc '.'
+        # category assignment
+        taxon = Taxon.find_by_id(imported_product['category_id'])
+        if(taxon)
+          putc '+'
+          product.taxons << taxon 
+        else
+          putc 'e'
+        end
+      end
+      puts "done!"
+    end
   end
 end
