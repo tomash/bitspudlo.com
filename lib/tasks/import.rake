@@ -47,7 +47,10 @@ namespace :import do
       json_file = File.open(ARGV[1])
       imported_products = ActiveSupport::JSON.decode(json_file.read)
       imported_products.sort_by{|ic| ic['id']}.each do |imported_product|
-        next if(Product.find_by_id(imported_product['id']))
+        if(p = Product.find_by_id(imported_product['id']))
+          p.master.update_attribute(:count_on_hand, imported_product['in_stock'])
+          next
+        end
         putc '.'
         product = Product.new
         product.id = imported_product['id']
@@ -74,6 +77,8 @@ namespace :import do
           i.attachment = File.open(imported_product['full_image_path'])
           i.save
         end
+        
+        product.master.update_attribute(:count_on_hand, imported_product['in_stock'])
         
         # category assignment
         taxon = Taxon.find_by_id(imported_product['category_id'])

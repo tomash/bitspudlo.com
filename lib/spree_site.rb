@@ -14,6 +14,10 @@ module SpreeSite
         #named_scope :with_translations, :include => :translations
         default_scope :include => :translations
       end
+      
+      Promotion.class_eval do
+        scope :advertised, includes(:stored_preferences).where("`preferences`.name = 'advertise' AND `preferences`.value = '1'")
+      end
     end
     
     def load_tasks
