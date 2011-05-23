@@ -4,8 +4,10 @@ module SpreeSite
       # Add your custom site logic here
       Order.class_eval do
         def generate_order_number
-          self.number = self.id
-          self.id
+          n = Time.now.to_i
+          n = self.id if(self.id)
+          self.number = n
+          n
         end
       end
       
