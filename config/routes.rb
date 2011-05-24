@@ -4,4 +4,7 @@ Bitspudlo50::Application.routes.draw do
   
   match ':locale/categories/:id' => 'legacy_categories#show'
   match '/categories/:id' => 'legacy_categories#show'
+  
+  match '/store/view_order/:id/:token' => 'legacy_orders#show'
+  match ':locale/store/view_order/:id/:token' => 'legacy_orders#show'
 end
