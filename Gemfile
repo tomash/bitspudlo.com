@@ -36,7 +36,8 @@ gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git'
 gem "nokogiri"
 gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git"
 
-gem "pp_website_standard", :git => "git://github.com/tomash/spree-pp-website-standard.git"
+gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-website-standard.git"
+#gem "spree_paypal_website_standard", :path => "/home/tomek/rails_apps/spree_ext/spree-pp-website-standard"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

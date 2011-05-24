@@ -2,3 +2,6 @@ paypal:
   account: "blah@example.com" 
   ipn_notify_host: "http://someserver.com"
   success_url: "http://localhost:3000/paypal/confirm"
+  encryption: true
+  cert_id: "GLKUMEH9XS756"
+  ipn_secret: "secretly"

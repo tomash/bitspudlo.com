@@ -5,11 +5,13 @@ Spree::Config.set(:address_requires_state => false)
 
 Spree::Paypal::Config.set({
   :account => APP_CONFIG["paypal"]["account"], 
-  :ipn_notify_host => APP_CONFIG["paypal"]["ipn_notify_host"],
   :success_url => APP_CONFIG["paypal"]["success_url"],
-  :currency_code => "EUR", 
+  :currency_code => "PLN", 
   :sandbox_url => APP_CONFIG["paypal"]["sandbox_url"],
   :paypal_url => APP_CONFIG["paypal"]["paypal_url"],
+  :encryption => APP_CONFIG["paypal"]["encryption"],
+  :cert_id    => APP_CONFIG["paypal"]["cert_id"],
+  :ipn_secret => APP_CONFIG["paypal"]["ipn_secret"]
 })
 
 Spree::Paypal::Config.set(:populate_address => true)

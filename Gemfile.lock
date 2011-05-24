@@ -60,10 +60,10 @@ GIT
 
 GIT
   remote: git://github.com/tomash/spree-pp-website-standard.git
-  revision: ba08cb7715f648a469c67a1f06566a7c304a1466
+  revision: 35b82449117ddec0658872a286fd44ec99a3e1f9
   specs:
-    pp_website_standard (0.8.1)
-      spree_core (>= 0.30.0)
+    spree_paypal_website_standard (0.8.3)
+      spree_core (>= 0.50.0)
 
 GEM
   remote: http://rubygems.org/
@@ -213,8 +213,8 @@ DEPENDENCIES
   multi_currencies!
   mysql2
   nokogiri
-  pp_website_standard!
   rails (= 3.0.7)
   rake (~> 0.8.7)
   spree!
+  spree_paypal_website_standard!
   thin
