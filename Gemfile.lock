@@ -60,7 +60,7 @@ GIT
 
 GIT
   remote: git://github.com/tomash/spree-pp-website-standard.git
-  revision: 35b82449117ddec0658872a286fd44ec99a3e1f9
+  revision: 0c3d645a3c79ba64978b43f770578d08757663a5
   specs:
     spree_paypal_website_standard (0.8.3)
       spree_core (>= 0.50.0)
