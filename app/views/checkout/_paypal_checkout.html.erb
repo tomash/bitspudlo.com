@@ -9,7 +9,7 @@
 
 <%- if(Spree::Paypal::Config[:encryption]) %>
   <%= hidden_field_tag(:cmd, "_s-xclick") %>
-  <%= hidden_field_tag(:encrypted, @order.paypal_encrypted(payment_notifications_url(:secret => Spree::Paypal::Config[:ipn_secret]))) %>
+  <%= hidden_field_tag(:encrypted, @order.paypal_encrypted(payment_notifications_url(:secret => Spree::Paypal::Config[:ipn_secret]), {:currency_code => Currency.current.char_code})) %>
 <% else %>
   <p>this shouldn't show, possible security breach</p>
 <% end %>
