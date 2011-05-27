@@ -265,13 +265,13 @@ body {
     left bottom,
     left top,
     color-stop(0.77, rgb(255,255,255)),
-    color-stop(0.8, rgb(194,27,27)),
+    color-stop(0.8, rgb(204,51,51)),
     color-stop(0.99, rgb(112,1,1))
   );
   background-image: -moz-linear-gradient(
       center bottom,
       rgb(255,255,255) 77%,
-      rgb(194,27,27) 80%,
+      rgb(204,51,51) 80%,
       rgb(112,1,1) 99%
   );
   min-height: 400px;
