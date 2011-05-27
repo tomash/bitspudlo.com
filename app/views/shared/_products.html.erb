@@ -16,7 +16,7 @@
         <%= hook :products_list_item, {:product => product} do %>
           <%= link_to small_image(product), product %>
           <%= link_to raw(product.name + " <span class='price selling'>#{product_price(product)}</span>"), product, :class => 'info' %>
-          <%= product.on_hand %>
+          <div class='availability'><%= product.on_hand %> in stock</div>
         <% end %>
       </li>
     <% end %>

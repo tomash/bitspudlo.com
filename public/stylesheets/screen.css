@@ -260,8 +260,27 @@ legend {
 }
 body {
   margin-top: 10px;
-  background: #ffffff url(../images/body-back.png) top left repeat-x;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.77, rgb(255,255,255)),
+    color-stop(0.8, rgb(194,27,27)),
+    color-stop(0.99, rgb(112,1,1))
+  );
+  background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(255,255,255) 77%,
+      rgb(194,27,27) 80%,
+      rgb(112,1,1) 99%
+  );
+  min-height: 400px;
 }
+
+body.one-col {
+  background-repeat: no-repeat;
+}
+
 div.left {
   float: left;
   width: 49%;
@@ -272,11 +291,25 @@ div.right {
 }
 a { outline: none; }
 #wrapper {
-  background: transparent url(../images/wrapper-back.png) top center no-repeat;
   padding: 25px 20px 20px;
   position: relative;
 }
-body.two-col #wrapper { background-image: url(../images/wrapper-back-2.png); }
+body.two-col #wrapper { 
+  background-color: #ffffff;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+body.one-col #wrapper { 
+  background-color: #ffffff;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
 .container {
   width: 950px;
   margin: 0 auto;
@@ -309,8 +342,9 @@ body.two-col #content {
   color: #2e6ab1;
   clear: both;
 }
-#header a { color: #2e6ab1; }
+#header a { color: #9ac7ff; }
 #header a:hover { color: #eeeeee; }
+
 #footer {
   padding-top: 2em;
   clear: both;
@@ -349,7 +383,9 @@ p img {
   white-space: nowrap;
   overflow: hidden;
 }
-.navigation-list li a:hover { background: url(../images/menu-hover.png) right center no-repeat; }
+.navigation-list li a:hover { 
+  background: url(../images/menu-hover.png) right center no-repeat; 
+}
 .navigation-list li.current { width: 200px; }
 .navigation-list li.current a {
   width: 180px;
@@ -430,6 +466,20 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
   padding-top: 10px;
   text-align: right;
 }
+
+ul#articles-bar {
+  clear: both;
+  float: right;
+  list-style: none;
+}
+
+ul#articles-bar li {
+  float: left;
+  margin-left: 1em;
+  color: #ffffff;
+}
+    
+    
 .pagination a.page {
   padding: 0px 5px;
   margin: 0px 3px;
@@ -637,6 +687,18 @@ p button img { margin: 0 5px 0 0; }
   background: #1b1b1b url(../images/bottom_shine.png) bottom left repeat-x;
   color: #ffffff;
 }
+
+.product-listing li .availability {
+  display: block;
+  position: absolute;
+  top: 110px;
+  width: 140px;
+  text-align: center;
+  text-decoration: underline;
+}
+ 
+
+
 ul.thumbnails {
   margin: 0;
   padding: 0;
