@@ -45,3 +45,4 @@ gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-w
 # group :development, :test do
 #   gem 'webrat'
 # end
+# gem "order_mailer", :path => "order_mailer", :require => "order_mailer"

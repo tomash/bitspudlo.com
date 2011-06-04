@@ -1,0 +1,71 @@
+<% if @order.ship_address.country.iso == "PL" %>
+
+
+Witamy!
+
+Dziękujemy za złożenie zamówienia w bitspudlo.com . Zamówienie zostało zatwierdzone i przygotowane, a zmiany wprowadzone wraz z wyliczeniem ostatecznego kosztu produktów i wysyłki.
+	
+===========================================================
+
+Podsumowanie zamówienia:
+
+============================================================
+<% for item in @order.line_items %>
+<%=item.variant.sku %> <%=item.variant.product.name%> <%= variant_options(item.variant) %> (<%=item.quantity%>) @ <%= number_to_currency item.price %> = <%= number_to_currency(item.price * item.quantity) %>
+<% end %>
+
+============================================================
+Wartość produktów: <%= number_to_currency @order.item_total %>
+<% @order.adjustments.each do |adjustment| %>
+<%= "Koszt wysyłki: #{number_to_currency adjustment.amount}"%>
+<% end %>
+Całkowity koszt: <%= number_to_currency @order.total %>
+
+Dane do przelewu na konto firmowe:
+Bitsbox s.c.
+ul. Zamiejska 10
+02-580 Warszawa
+
+nr. rachunku 65 1140 2004 0000 3102 7093 1008
+
+Zamówienie zostanie wysłane/przygotowane do odbioru po zaksięgowaniu wpłaty.
+
+W przypadku zamówień zawierających produkty Bitsbox.eu czas realizacji zamówienia to 7-10 dni roboczych.
+
+Serdecznie pozdrawiamy,
+
+ekipa BitsPudło.com:
+Krzysztof "Zły" Białek
+Tomasz "Tomash" Stachewicz
+
+
+<% else %>
+
+Dear Customer,
+
+Please review and retain the following order information for your records.
+
+============================================================
+Order Summary
+
+============================================================
+<% for item in @order.line_items %>
+<%=item.variant.sku %> <%=item.variant.product.name%> <%= variant_options(item.variant) %> (<%=item.quantity%>) @ <%= number_to_currency item.price %> = <%= number_to_currency(item.price * item.quantity) %>
+<% end %>
+============================================================
+Subtotal: <%= number_to_currency @order.item_total %>
+<% @order.adjustments.each do |adjustment| %>
+<%= "#{adjustment.label}: #{number_to_currency adjustment.amount}"%>
+<% end %>
+Order Total: <%= number_to_currency @order.total %>
+
+In case of Bitsbox.eu products orders will be shipped in 7-10 working days from payment.
+
+Thank you for your business.
+
+Bitspudlo Staff
+
+Krzysztof "Zly" Bialek
+Tomasz "Tomash" Stachewicz
+
+<% end %>
