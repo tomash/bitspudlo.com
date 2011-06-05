@@ -1,6 +1,5 @@
 <% if @order.ship_address.country.iso == "PL" %>
 
-
 Witamy!
 
 Dziękujemy za złożenie zamówienia w bitspudlo.com . Zamówienie zostało zatwierdzone i przygotowane, a zmiany wprowadzone wraz z wyliczeniem ostatecznego kosztu produktów i wysyłki.
@@ -21,6 +20,10 @@ Wartość produktów: <%= number_to_currency @order.item_total %>
 <% end %>
 Całkowity koszt: <%= number_to_currency @order.total %>
 
+<% if @order.payment.payment_method.id == 1 %>
+
+<% else %>
+
 Dane do przelewu na konto firmowe:
 Bitsbox s.c.
 ul. Zamiejska 10
@@ -28,9 +31,10 @@ ul. Zamiejska 10
 
 nr. rachunku 65 1140 2004 0000 3102 7093 1008
 
-Zamówienie zostanie wysłane/przygotowane do odbioru po zaksięgowaniu wpłaty.
+<% end %>
+Zamówienia wysyłamy w ciągu 3 dni roboczych od zaksięgowania wpłaty.
 
-W przypadku zamówień zawierających produkty Bitsbox.eu czas realizacji zamówienia to 7-10 dni roboczych.
+W przypadku zamówień zawierających produkty Bitsbox.eu czas realizacji wynosi 7 do 10 dni roboczych.
 
 Serdecznie pozdrawiamy,
 
@@ -59,7 +63,8 @@ Subtotal: <%= number_to_currency @order.item_total %>
 <% end %>
 Order Total: <%= number_to_currency @order.total %>
 
-In case of Bitsbox.eu products orders will be shipped in 7-10 working days from payment.
+We usually ship within 3 working days from recieving payment.
+Orders containing Bitsbox.eu products will be shipped in 7-10 working days from payment.
 
 Thank you for your business.
 
