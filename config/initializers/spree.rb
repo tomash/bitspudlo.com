@@ -19,8 +19,14 @@ Spree::Paypal::Config.set(:populate_address => true)
 # no SSL please
 Spree::Config.set(:allow_ssl_in_production => false)
 
-# 
+# client-side
 Spree::Config.set(:products_per_page => 24)
+
+# admin
+Spree::Config.set(:orders_per_page => 20)
+Spree::Config.set(:admin_products_per_page => 20)
+
+# inventory-related stuff
 Spree::Config.set(:allow_backorders => false)
 
 I18n.locale = :en
