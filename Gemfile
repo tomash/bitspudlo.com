@@ -27,7 +27,8 @@ gem 'capistrano-ext'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # spree-related gems:
-gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
+#gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
+gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => '32d3356a2d8ff09068db07dcefbd6c0b5b0dc759'
 
 gem "i18n"
 gem "globalize3"
