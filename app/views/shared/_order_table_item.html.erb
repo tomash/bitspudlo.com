@@ -1,5 +1,9 @@
-<td width="300"><%=item.variant.product.name%> <%= "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty? %>| Category: <%=item.variant.product.taxons.first.name%>
-<%= link_to 'image', item.variant.product.images.first.attachment.url(:product), :class => "product_image" %> </td>
+<td width="300"><%=item.variant.product.name%> <%= "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty? %>
+<%= link_to 'image', item.variant.product.images.first.attachment.url(:product), :class => "product_image" %>
+<% if(item.variant.product.taxons.any?) %>
+  <br />taxon: <i><%=item.variant.product.taxons.first.name%></i>
+<% end %>
+</td>
 <td class="price"><%= number_to_currency item.price %></td>
 <td class="qty"><%=item.quantity%></td>
 <td class="total"><span><%= number_to_currency (item.price * item.quantity)%></span></td>
