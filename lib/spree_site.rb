@@ -28,15 +28,6 @@ module SpreeSite
         globalize_accessors :pl, :en
         #named_scope :with_translations, :include => :translations
         default_scope :include => :translations
-        
-        # Creates permalink based on .to_url method provided by stringx gem
-        def set_permalink
-          if parent_id.nil?
-            self.permalink = name.to_url if self.permalink.blank?
-          else
-            self.permalink = "#{t.root.permalink}/#{t.id}-#{t.name.to_url}"
-          end
-        end
       end
       
       
