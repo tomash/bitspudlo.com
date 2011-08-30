@@ -5,3 +5,4 @@ paypal:
   encryption: true
   cert_id: "GLKUMEH9XS756"
   ipn_secret: "secretly"
+host: "localhost:3000"

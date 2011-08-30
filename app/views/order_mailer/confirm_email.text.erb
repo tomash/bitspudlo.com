@@ -36,6 +36,8 @@ Zamówienia wysyłamy w ciągu 3 dni roboczych od zaksięgowania wpłaty.
 
 W przypadku zamówień zawierających produkty Bitsbox.eu czas realizacji wynosi 7 do 10 dni roboczych.
 
+Możesz w dowolnej chwili obejrzeć swoje zamówienie pod adresem <%= token_order_url(@order, @order.token) rescue "" %> .
+
 Serdecznie pozdrawiamy,
 
 ekipa BitsPudło.com:
@@ -65,6 +67,8 @@ Order Total: <%= number_to_currency @order.total %>
 
 We usually ship within 3 working days from recieving payment.
 Orders containing Bitsbox.eu products will be shipped in 7-10 working days from payment.
+
+You can see the details of your order anytime by visiting <%= token_order_url(@order, @order.token) rescue "" %> .
 
 Thank you for your business.
 

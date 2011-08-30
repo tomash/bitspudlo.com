@@ -30,3 +30,6 @@ Spree::Config.set(:admin_products_per_page => 20)
 Spree::Config.set(:allow_backorders => false)
 
 I18n.locale = :en
+
+# other config options
+config.action_mailer.default_url_options = { :host => APP_CONFIG["host"] }
