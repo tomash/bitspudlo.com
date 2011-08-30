@@ -33,4 +33,4 @@ I18n.locale = :en
 
 
 # other config options
-Rails.application.config.action_mailer.default_url_options = { :host => APP_CONFIG["host"] }
+ActionMailer::Base.default_url_options[:host] = APP_CONFIG["host"]
