@@ -31,7 +31,7 @@ gem 'capistrano-ext'
 gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => '32d3356a2d8ff09068db07dcefbd6c0b5b0dc759'
 
 gem "i18n"
-gem "globalize3"
+gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git'
 gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git'
 
 gem "nokogiri"

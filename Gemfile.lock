@@ -51,6 +51,15 @@ GIT
       spree_core (= 0.60.99)
 
 GIT
+  remote: git://github.com/svenfuchs/globalize3.git
+  revision: ca5ba146b70543f22c7bfdcd7455b0d4c560449a
+  specs:
+    globalize3 (0.2.0.beta1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      paper_trail (~> 2)
+
+GIT
   remote: git://github.com/tomash/globalize-spree.git
   revision: f9dabb97f19645c7ba83dec297d86a212f5b2326
   specs:
@@ -125,9 +134,6 @@ GEM
     eventmachine (0.12.10)
     faker (0.9.5)
       i18n (~> 0.4)
-    globalize3 (0.0.11)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
     highline (1.5.1)
     i18n (0.5.0)
     jquery-rails (0.2.6)
@@ -160,6 +166,8 @@ GEM
       net-ssh (>= 1.99.1)
     nokogiri (1.4.5)
     orm_adapter (0.0.5)
+    paper_trail (2.2.5)
+      rails (~> 3)
     paperclip (2.3.8)
       activerecord
       activesupport
@@ -197,7 +205,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.28)
+    tzinfo (0.3.29)
     warden (1.0.4)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
@@ -208,7 +216,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-ext
-  globalize3
+  globalize3!
   globalize_spree!
   i18n
   multi_currencies!
