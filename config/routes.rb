@@ -1,5 +1,8 @@
 Bitspudlo50::Application.routes.draw do
 
+  root :to => 'home#index'
+
+  # gracefully handling legacy URLs
   #match ':locale/products/:id' => 'legacy_products#show'
   match '/en/products/:id' => 'legacy_products#show'
   match '/pl/products/:id' => 'legacy_products#show'
