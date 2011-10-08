@@ -9,6 +9,13 @@ GIT
       spree_core (>= 0.50.0)
 
 GIT
+  remote: git://github.com/romul/spree_mobile_views.git
+  revision: dae03a208220c717cfdc9ea54d91a789f579cbd4
+  specs:
+    spree_mobile_views (0.50.2)
+      spree_core (>= 0.50.0)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 32d3356a2d8ff09068db07dcefbd6c0b5b0dc759
   ref: 32d3356a2d8ff09068db07dcefbd6c0b5b0dc759
@@ -225,5 +232,6 @@ DEPENDENCIES
   rails (= 3.0.7)
   rake (~> 0.8.7)
   spree!
+  spree_mobile_views!
   spree_paypal_website_standard!
   thin

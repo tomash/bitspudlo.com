@@ -40,6 +40,8 @@ gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.gi
 gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-website-standard.git"
 #gem "spree_paypal_website_standard", :path => "/home/tomek/rails_apps/spree_ext/spree-pp-website-standard"
 
+gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:

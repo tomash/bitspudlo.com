@@ -1,0 +1,12 @@
+<h1 style="margin:0">Bitspudlo.com</h1>
+
+<p>Welcome to our store. Have a nice shopping!</p>
+
+<% get_taxonomies.each do |taxonomy| %>
+  <ul data-role="listview">
+    <% taxonomy.root.children.each do |taxon| %>
+      <li><%= link_to taxon.name, seo_url(taxon) %></li>
+    <% end %>
+  </ul>
+<% end %>
+	 
