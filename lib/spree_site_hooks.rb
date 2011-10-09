@@ -6,4 +6,6 @@ class SpreeSiteHooks < Spree::ThemeSupport::HookListener
 
   insert_after :admin_order_show_details, 'shared/admin_order_show_bottom'
 
+  insert_before :admin_orders_index_search, 'shared/admin_orders_quick_links'
+
 end
