@@ -8,9 +8,15 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Bitspudlo50
   class Application < Rails::Application
-  require 'spree_site'
-  config.middleware.use "RedirectLegacyProductUrl"
-  config.middleware.use "SeoAssist"
+    config.middleware.use "SeoAssist"
+    config.middleware.use "RedirectLegacyProductUrl"
+
+    config.to_prepare do
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -41,5 +47,11 @@ module Bitspudlo50
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # asset pipeline
+    config.assets.enabled = true
+
   end
 end
+
+require 'lib/site_hooks'

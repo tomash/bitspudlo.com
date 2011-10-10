@@ -1,4 +1,4 @@
-APP_CONFIG = YAML.load(File.read(File.join(RAILS_ROOT, "config", "application.yml")))
+APP_CONFIG = YAML.load(File.read(File.join(Rails.root, "config", "application.yml")))
 
 # validations
 Spree::Config.set(:address_requires_state => false)
