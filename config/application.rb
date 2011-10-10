@@ -54,4 +54,4 @@ module Bitspudlo50
   end
 end
 
-require 'lib/site_hooks'
+#require 'lib/site_hooks'
