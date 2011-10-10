@@ -2,6 +2,7 @@
 <html>
   <head data-hook="inside_head">
     <%= render 'shared/head' %>
+    <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <div id="header" data-hook>
@@ -18,6 +19,7 @@
           <%= link_to "USD", "/currency/USD" %>
         </li>
       </ul>
+      <%= logo %>
     </div>
 
     <div id="wrapper" data-hook>

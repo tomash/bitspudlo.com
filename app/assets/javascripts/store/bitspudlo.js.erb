@@ -4,10 +4,10 @@ jQuery(document).ready(function() {
   jQuery('ul#product-thumbnails li a').lightBox({
     overlayOpacity: 0.1,
     imageBlank:  "<%= asset_path('lightbox-blank.gif') %>",
-    imageLoading: "<%= asset_path('lightbox-ico-loading.gif') %>",
-    imageBtnClose: "<%= asset_path('lightbox-btn-close.gif') %>",
-    imageBtnPrev: "<%= asset_path('lightbox-btn-prev.gif') %>",
-    imageBtnNext: "<%= asset_path('lightbox-btn-next.gif') %>"
+    imageLoading: '/images/lightbox-ico-loading.gif',
+    imageBtnClose: '/images/lightbox-btn-close.gif',
+    imageBtnPrev: '/images/lightbox-btn-prev.gif',
+    imageBtnNext: '/images/lightbox-btn-next.gif'
   });
   
   jQuery('#main-image img').click(function() {
