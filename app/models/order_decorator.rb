@@ -1,8 +1,11 @@
 Order.class_eval do
   def generate_order_number
-    n = Time.now.to_i
-    n = self.id if(self.id)
-    self.number = n
-    n
+    record = true
+    while record
+      random = Time.now.to_i + rand(30)
+      record = self.class.find(:first, :conditions => ["number = ?", random])
+    end
+    self.number = random if self.number.blank?
+    self.number
   end
 end
