@@ -12,8 +12,8 @@ def calculate(date_from, date_to)
   puts "netto #{netto_total.to_f}\t\t brutto #{brutto_total.to_f}"
 end
 
-date_from = Time.parse("2011-08-01")
-date_to = Time.parse("2011-08-01")
+date_from = Time.parse("2011-09-01")
+date_to = Time.parse("2011-09-01")
 
 partial_netto = 0
 0.upto(6) do |i|
@@ -23,7 +23,7 @@ partial_netto = 0
   calculate(date_from, date_to)
 end
 
-date_from = Time.parse("2011-08-26")
-date_to = Time.parse("2011-09-01")
+date_from = Time.parse("2011-09-01")
+date_to = Time.parse("2011-10-01")
 puts "calculating from #{date_from} to #{date_to}"
   calculate(date_from, date_to)
