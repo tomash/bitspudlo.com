@@ -49,3 +49,6 @@ gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git
 #   gem 'webrat'
 # end
 # gem "order_mailer", :path => "order_mailer", :require => "order_mailer"
+
+gem "airbrake"
+

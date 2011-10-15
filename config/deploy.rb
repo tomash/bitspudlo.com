@@ -46,3 +46,6 @@ end
 
 
 after "deploy", "deploy:migrate"
+
+require './config/boot'
+require 'airbrake/capistrano'

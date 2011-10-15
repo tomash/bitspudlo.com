@@ -117,6 +117,9 @@ GEM
       activesupport (= 3.0.7)
     activesupport (3.0.7)
     acts_as_list (0.1.2)
+    airbrake (3.0.4)
+      activesupport
+      builder
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
     braintree (2.10.1)
@@ -221,6 +224,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
   capistrano
   capistrano-ext
   globalize3!
