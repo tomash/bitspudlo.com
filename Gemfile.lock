@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/svenfuchs/globalize3.git
-  revision: 42a40e2788e7c0d2ecdccca1df7e9b58f55aad50
+  revision: f509e753ba2933228b65e23d924a1131912ad7ed
   specs:
     globalize3 (0.2.0.beta4)
       activemodel (>= 3.0.0)
@@ -32,12 +32,13 @@ GIT
 
 GIT
   remote: git://github.com/tomash/globalize-spree.git
-  revision: f9dabb97f19645c7ba83dec297d86a212f5b2326
+  revision: 8fcf2afe9dd8ab20c66c4aafe8cc24a624828e02
+  ref: 8fcf2af
   specs:
-    globalize_spree (0.2.0)
+    globalize_spree (0.2.1)
       globalize3 (>= 0.0.9)
       i18n (>= 0.4.2)
-      spree_core (>= 0.30.0.beta2)
+      spree_core (>= 0.70.0)
 
 GIT
   remote: git://github.com/tomash/spree-pp-website-standard.git
