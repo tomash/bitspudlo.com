@@ -25,7 +25,7 @@ task :make_symlinks do
   # run "ln -nfs #{deploy_to}/#{shared_dir}/public/assets #{release_path}/public/assets"
   run "ln -nfs #{deploy_to}/#{shared_dir}/certs #{release_path}/certs"
   # run "ln -nfs /u/apps/bitspudlo/shared/public/images/products #{release_path}/public/images/products"
-  run "ln -nfs /u/apps/bitspudlo/shared/public/spree/products #{release_path}/public/spree/products"
+  run "ln -nfs #{deploy_to}/#{shared_dir}/public/spree/products #{release_path}/public/spree/products"
 end
 
 namespace :deploy do
