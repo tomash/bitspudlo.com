@@ -21,7 +21,7 @@ gem 'capistrano-ext'
 # spree-related gems:
 #gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-60-stable'
 #gem 'spree', :git => 'git://github.com/spree/spree.git', :ref => '32d3356a2d8ff09068db07dcefbd6c0b5b0dc759'
-gem 'spree', '~> 0.70.0'
+gem 'spree', '~> 0.70.1'
 
 gem "i18n"
 gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git'
