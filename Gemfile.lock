@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/airbrake/airbrake.git
+  revision: 582dce92bc2fc283f822e4b90790003ac6199c3b
+  specs:
+    airbrake (3.0.4)
+      activesupport
+      builder
+
+GIT
   remote: git://github.com/pronix/spree-multi-currency.git
   revision: 38df37a427a91ea401a3486eddc45227ae86471e
   specs:
@@ -84,9 +92,6 @@ GEM
     activesupport (3.1.1)
       multi_json (~> 1.0)
     acts_as_list (0.1.4)
-    airbrake (3.0.4)
-      activesupport
-      builder
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     braintree (2.12.0)
@@ -269,7 +274,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake
+  airbrake!
   capistrano
   capistrano-ext
   coffee-rails (~> 3.1.0.rc)

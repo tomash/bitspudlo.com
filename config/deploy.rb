@@ -17,15 +17,14 @@ set :scm_verbose, true
 set :env, "production"
 
 require 'bundler/capistrano'
-require 'deploy/assets'
 
 desc "Link in the shared stuff" 
 task :after_update_code do
   run "ln -nfs #{deploy_to}/#{shared_dir}/config/application.yml #{release_path}/config/application.yml"
   run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
-  run "ln -nfs #{deploy_to}/#{shared_dir}/public/assets #{release_path}/public/assets"
+  # run "ln -nfs #{deploy_to}/#{shared_dir}/public/assets #{release_path}/public/assets"
   run "ln -nfs #{deploy_to}/#{shared_dir}/certs #{release_path}/certs"
-  #run "ln -nfs /u/apps/bitspudlo/shared/public/images/products #{release_path}/public/images/products"
+  # run "ln -nfs /u/apps/bitspudlo/shared/public/images/products #{release_path}/public/images/products"
   run "ln -nfs /u/apps/bitspudlo/shared/public/spree/products #{release_path}/public/spree/products"
 end
 

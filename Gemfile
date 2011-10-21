@@ -42,5 +42,6 @@ group :assets do
   gem 'uglifier'
 end
 
-gem "airbrake"
+#gem "airbrake"
+gem "airbrake", :git => "git://github.com/airbrake/airbrake.git"
 
