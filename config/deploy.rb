@@ -19,7 +19,7 @@ set :env, "production"
 require 'bundler/capistrano'
 
 desc "Link in the shared stuff" 
-task :after_update_code do
+task :make_symlinks do
   run "ln -nfs #{deploy_to}/#{shared_dir}/config/application.yml #{release_path}/config/application.yml"
   run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
   # run "ln -nfs #{deploy_to}/#{shared_dir}/public/assets #{release_path}/public/assets"
@@ -47,6 +47,8 @@ end
 
 
 after "deploy", "deploy:migrate"
+#after "deploy:update_code", "make_symlinks"
+before "deploy:assets:precompile", "make_symlinks"
 
 require './config/boot'
 require 'airbrake/capistrano'
