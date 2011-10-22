@@ -16,3 +16,24 @@ jQuery(document).ready(function() {
   
 });
 
+/*slider*/
+  $(document).ready(function(){
+      var slider = $('#slider1').bxSlider({
+          controls: false,
+          infiniteLoop: true,
+          pager: true,
+          speed: 500,
+          mode: 'horizontal',
+          auto: 'true'
+      });
+          
+      $('#bx-prev').click(function() {
+          slider.goToPreviousSlide();
+          return false;
+      });
+      
+      $('#bx-next').click(function() {
+          slider.goToNextSlide();
+          return false;
+      });             
+  });

@@ -2,6 +2,26 @@
 
 ul.thumbnails-hidden { display: none }
 
+/********************/
+/* slider */
+/********************/
+
+#bx-main { height:450px; width:100%; min-width: 790px}
+#bx-image{clear:both}
+img.bx-image { float:left}
+li.bx-list { width:720px !important; min-width:720px !important}
+.bx-window { width:720px; height:450px; } 
+#bx-header { font: 'Droid Sand'; font-size:40px; color:#ffffff; font-weight:bold; text-shadow: 0px 2px 4px #66859e; float:left; width:500px }
+#bx-left { float:left; margin: 67px -4% 0% 1% }
+div#bx-bottom { height:70px }
+.bx-wrapper { width:720px !important; max-height:600px; margin-left:30px}
+a.bx-launch { background:url("/assets/store/button_launch.png") no-repeat 0 -53px; width:200px; height:53px; display:block; float:left}
+.bx-launch:hover {background-position: 0 0 }
+.pager-link { background:url("/assets/store/slideshow_bullet.png") no-repeat; padding 0 -40px;}
+.pager-link.pager-active { background:url("/assets/store/slideshow_bullet.png") no-repeat; padding 0 -20px padding-bottom:12px; }
+#bx-description  { width:240px; height:195px; font-family: 'Arial'; font-size:16px; color:#ffffff; text-shadow:0px 1px #4d5861; line-height:1.5em  }
+#controls-left { width:40px; height:auto; float:left }
+#controls-right { width:40px; height:auto; float:right }
 /* overrides of blue theme */
 
 body {
@@ -71,4 +91,8 @@ ul#articles-bar li {
   width: 140px;
   text-align: center;
   text-decoration: underline;
+}
+
+div#sidebar{
+  margin-right:12px;
 }
