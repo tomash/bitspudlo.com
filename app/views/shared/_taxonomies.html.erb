@@ -1,4 +1,4 @@
-<% cache('taxonomies_sidebar') do %>
+<% cache do %>
 <div id="taxonomies" class="sidebar-item" data-hook>
   <% get_taxonomies.each do |taxonomy| %>
     <h3 class='taxonomy-root'><%= t(:shop_by_taxonomy, :taxonomy => taxonomy.name.singularize) %></h3>
