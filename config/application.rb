@@ -15,6 +15,10 @@ module Bitspudlo50
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
+
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
     end
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -50,6 +54,11 @@ module Bitspudlo50
 
     # asset pipeline
     config.assets.enabled = true
+
+    # cache store
+    # default memory_store
+    config.cache_store = :memory_store
+    # config.cache_store = :redis_store
 
   end
 end
