@@ -7,19 +7,16 @@ ul.thumbnails-hidden { display: none }
 /********************/
 
 #bx-main { height:450px; width:100%; min-width: 780px}
-#bx-image{clear:both}
 img.bx-image { float:left}
 li.bx-list { width:700px !important; min-width:700px !important}
 .bx-window { width:700px; height:450px; } 
-#bx-header { font: 'Droid Sand'; font-size:40px; color:#ffffff; font-weight:bold; text-shadow: 0px 2px 4px #66859e; float:left; width:400px }
-#bx-left { float:left; margin: 67px -4% 0% 1% }
+#bx-category { font: 'Droid Sand'; font-size:26px; color:#ffffff; font-weight:bold; text-shadow: 0px 2px 4px #66859e; float:left; width:410px; float:right }
 div#bx-bottom { height:70px }
 .bx-wrapper { width:700px !important; max-height:600px; margin-left:36px}
 a.bx-launch { background:url("/assets/store/go_category_en.png") no-repeat 0 0; width:250px; height:50px; display:block; float:left}
 .bx-launch:hover {background-position: 0 -50px }
 .pager-link { background:url("/assets/store/slideshow_bullet.png") no-repeat; padding 0 -40px;}
 .pager-link.pager-active { background:url("/assets/store/slideshow_bullet.png") no-repeat; padding 0 -20px padding-bottom:12px; }
-#bx-description  { width:240px; height:195px; font-family: 'Arial'; font-size:16px; color:#ffffff; text-shadow:0px 1px #4d5861; line-height:1.5em  }
 #controls-left { width:40px; height:auto; float:left }
 #controls-right { width:40px; height:auto; float:right }
 /* overrides of blue theme */
