@@ -10,7 +10,8 @@ ul.thumbnails-hidden { display: none }
 img.bx-image { float:left}
 li.bx-list { width:700px !important; min-width:700px !important}
 .bx-window { width:700px; height:450px; } 
-#bx-category { font: 'Droid Sand'; font-size:26px; color:#ffffff; font-weight:bold; text-shadow: 0px 2px 4px #66859e; float:left; width:410px; float:right }
+a.bx-category { font: 'Droid Sand'; font-size:40px; color:#ffffff; font-weight:bold; text-shadow: 0px 2px 4px #66859e; width:410px; text-align:center; text-decoration:none }
+a.bx-category:hover {text-decoration: underline }
 div#bx-bottom { height:70px }
 .bx-wrapper { width:700px !important; max-height:600px; margin-left:36px}
 a.bx-launch { background:url("/assets/store/go_category_en.png") no-repeat 0 0; width:250px; height:50px; display:block; float:left}
