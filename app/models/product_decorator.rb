@@ -3,4 +3,5 @@ Product.class_eval do
   scope :recent, order('products.created_at DESC')
   #named_scope :with_translations, :include => :translations
   default_scope :include => :translations
+  default_scope order('products.created_at DESC')
 end
