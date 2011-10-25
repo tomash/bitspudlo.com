@@ -8,7 +8,8 @@ GIT
 
 GIT
   remote: git://github.com/pronix/spree-multi-currency.git
-  revision: 38df37a427a91ea401a3486eddc45227ae86471e
+  revision: e17e5c4728c16371c3e0d468361ea22a0d423cba
+  ref: e17e5c
   specs:
     multi_currencies (1.0.3)
       json (>= 1.5.1)
@@ -146,7 +147,7 @@ GEM
       activerecord (~> 3.1.0)
       activesupport (~> 3.1.0)
       polyamorous (~> 0.5.0)
-    mime-types (1.16)
+    mime-types (1.17.1)
     money (3.7.1)
       i18n (~> 0.4)
     multi_json (1.0.3)
