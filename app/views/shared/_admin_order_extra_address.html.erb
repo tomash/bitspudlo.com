@@ -1,7 +1,0 @@
-<div class='adr' id="addr3">
-  <h4>Contact Info</h4>
-  <p>
-    <%= link_to @order.email, "mailto:#{@order.email}" %><br />
-    <%= link_to token_order_url(@order, @order.token), token_order_path(@order, @order.token) %>
-  </p>
-</div>
