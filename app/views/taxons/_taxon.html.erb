@@ -1,4 +1,4 @@
-<% cache("taxon_preview_#{taxon.id}") do %>
+<% cache("taxon_preview.#{taxon.id}.#{Currency.try(:current).try(:char_code)}") do %>
 <div class="taxon" data-hook="taxon">
   <h2><%= link_to taxon.name, seo_url(taxon), :class => 'breadcrumbs' %></h2>
   <%= render :partial => 'shared/products', :locals => {:products => taxon_preview(taxon), :taxon => taxon} %>
