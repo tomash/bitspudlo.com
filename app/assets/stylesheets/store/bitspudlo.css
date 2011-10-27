@@ -70,7 +70,7 @@ body.one-col #wrapper {
 #header a { color: #9ac7ff; }
 #header a:hover { color: #eeeeee; }
 
-#header select#taxon { width: 200px;}
+#header select#taxon { width: 180px;}
 
 ul#articles-bar {
   clear: both;
