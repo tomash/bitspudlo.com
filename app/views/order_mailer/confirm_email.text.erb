@@ -20,7 +20,7 @@ Wartość produktów: <%= number_to_currency @order.item_total %>
 <% end %>
 Całkowity koszt: <%= number_to_currency @order.total %>
 
-<% if @order.payment.payment_method.id == 1 %>
+<% if @order.payment.try(:payment_method).try(:id) == 1 %>
 
 <% else %>
 
