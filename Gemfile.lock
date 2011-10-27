@@ -51,10 +51,10 @@ GIT
 
 GIT
   remote: git://github.com/tomash/spree-pp-website-standard.git
-  revision: 8c7df67f099f197aae864b799c49ffdf915e1b42
+  revision: e48c8013c2b428601a55851c4635378640b644ab
   specs:
-    spree_paypal_website_standard (0.8.3)
-      spree_core (>= 0.50.0)
+    spree_paypal_website_standard (0.8.4)
+      spree_core (>= 0.70.0)
 
 GEM
   remote: http://rubygems.org/
@@ -148,7 +148,7 @@ GEM
       activerecord (~> 3.1.0)
       activesupport (~> 3.1.0)
       polyamorous (~> 0.5.0)
-    mime-types (1.17.1)
+    mime-types (1.17.2)
     money (3.7.1)
       i18n (~> 0.4)
     multi_json (1.0.3)
