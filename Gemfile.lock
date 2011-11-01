@@ -56,6 +56,13 @@ GIT
     spree_paypal_website_standard (0.8.4)
       spree_core (>= 0.70.0)
 
+PATH
+  remote: ./vendor/spree_analytics
+  specs:
+    spree_analytics (0.1.0)
+      rest-client
+      spree_core (>= 0.60.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -206,6 +213,8 @@ GEM
     rd_resource_controller (1.0.1)
     rdoc (3.11)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.1.10)
     sass-rails (3.1.5.rc.1)
       actionpack (~> 3.1.0)
@@ -292,6 +301,7 @@ DEPENDENCIES
   rake (~> 0.8.7)
   sass-rails (~> 3.1.0.rc)
   spree (~> 0.70.1)
+  spree_analytics!
   spree_blue_theme!
   spree_mobile_views!
   spree_paypal_website_standard!
