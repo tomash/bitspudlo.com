@@ -36,6 +36,9 @@ gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-w
 gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
 gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
 
+# spree analytics
+gem 'spree_analytics', :path => "./vendor/spree_analytics"
+
 group :assets do
   gem 'sass-rails', "~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
