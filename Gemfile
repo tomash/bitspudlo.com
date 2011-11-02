@@ -49,6 +49,11 @@ group :production do
   gem 'therubyracer'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl'
+end
+
 #gem "airbrake"
 gem "airbrake", :git => "git://github.com/airbrake/airbrake.git"
 
