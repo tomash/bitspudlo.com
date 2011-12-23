@@ -8,4 +8,9 @@ Order.class_eval do
     self.number = random if self.number.blank?
     self.number
   end
+
+  def self.find_by_param(param)
+    Order.where(:number => param).first || Order.find(param)
+  end
+
 end
