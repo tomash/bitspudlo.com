@@ -97,27 +97,32 @@ div#sidebar{
   margin-right:12px;
 }
 
-div#social{
+div#social {
   padding-top:40px;
   float:left;
   width:700px;
   padding-left:50px;
 }
 
-.left{ 
+.left { 
   float:left
 }
 
-div#twitter{
+div#twitter {
   width:150px;
   margin-right:20px;
 }
 
-div#fb{
+div#fb {
   width:250px;
   margin-right:60px;
 }
 
-div#gplus{
+div#gplus {
   width:150px;
 }
+
+div#social {
+  display: none;
+}
+
