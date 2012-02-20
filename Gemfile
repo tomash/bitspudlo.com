@@ -31,7 +31,7 @@ gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git', :r
 gem "nokogiri"
 gem "multi_currencies", :git => "git://github.com/pronix/spree-multi-currency.git", :ref => 'e17e5c'
 
-gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-website-standard.git"
+gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-website-standard.git", :branch => 'version084'
 #gem "spree_paypal_website_standard", :path => "/home/tomek/rails_apps/spree_ext/spree-pp-website-standard"
 
 # spree templates and themes

@@ -3,18 +3,25 @@ set :application, "bitspudlo50"
 set :user, "ror-bitspudlo"  # CHANGE THIS LINE TO USE YOUR OCS USERNAME
 set :use_sudo, false
 
-role :app, "beta.bitspudlo.com"
-role :web, "beta.bitspudlo.com"
-role :db,  "beta.bitspudlo.com", :primary => true
+role :app, "bitspudlo.com"
+role :web, "bitspudlo.com"
+role :db,  "bitspudlo.com", :primary => true
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
 set :scm, :git
-set :repository, "tomash@bitspudlo.com:/var/git/bitspudlo_spree"
+#set :repository, "tomash@thirster:/var/git/bitspudlo_spree"
+set :repository, 'git@git.rebased.pl:bitspudlo_spree.git'
 set :branch, "master"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :scm_verbose, true
 set :env, "production"
+
+set :default_environment, {
+  'PATH' => '/usr/local/bin:$PATH'
+}
+
 
 require 'bundler/capistrano'
 
