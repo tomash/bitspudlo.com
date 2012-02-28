@@ -51,7 +51,7 @@ GIT
 
 GIT
   remote: git://github.com/tomash/spree-pp-website-standard.git
-  revision: 98448faa41ea2ce1d0f1099f991264011ddd1f71
+  revision: 632663f028972a442dbbfd2d1571d71398959492
   branch: version084
   specs:
     spree_paypal_website_standard (0.8.4)
@@ -101,7 +101,7 @@ GEM
     activesupport (3.1.1)
       multi_json (~> 1.0)
     acts_as_list (0.1.4)
-    arel (2.2.1)
+    arel (2.2.3)
     bcrypt-ruby (3.0.1)
     braintree (2.13.4)
       builder (>= 2.0.0)
