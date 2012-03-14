@@ -1,7 +1,7 @@
 APP_CONFIG = YAML.load(File.read(File.join(Rails.root, "config", "application.yml")))
 
 # validations
-Spree::Config.set(:address_requires_state => false)
+Spree::Config.set(:address_requires_state => true)
 
 Spree::Paypal::Config.set({
   :account => APP_CONFIG["paypal"]["account"], 
