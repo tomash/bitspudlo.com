@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110418151136) do
+ActiveRecord::Schema.define(:version => 20120405131052) do
 
   create_table "activators", :force => true do |t|
     t.string   "description"
@@ -278,6 +279,14 @@ ActiveRecord::Schema.define(:version => 20110418151136) do
     t.string   "avs_response"
   end
 
+  create_table "pending_promotions", :force => true do |t|
+    t.integer "user_id"
+    t.integer "promotion_id"
+  end
+
+  add_index "pending_promotions", ["promotion_id"], :name => "index_pending_promotions_on_promotion_id"
+  add_index "pending_promotions", ["user_id"], :name => "index_pending_promotions_on_user_id"
+
   create_table "preferences", :force => true do |t|
     t.string   "name",       :limit => 100, :null => false
     t.integer  "owner_id",                  :null => false
@@ -378,6 +387,12 @@ ActiveRecord::Schema.define(:version => 20110418151136) do
 
   add_index "products_taxons", ["product_id"], :name => "index_products_taxons_on_product_id"
   add_index "products_taxons", ["taxon_id"], :name => "index_products_taxons_on_taxon_id"
+
+  create_table "promotion_action_line_items", :force => true do |t|
+    t.integer "promotion_action_id"
+    t.integer "variant_id"
+    t.integer "quantity",            :default => 1
+  end
 
   create_table "promotion_actions", :force => true do |t|
     t.integer "activator_id"

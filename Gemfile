@@ -19,7 +19,7 @@ gem 'capistrano-ext'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # spree-related gems:
-gem 'spree', '~> 0.70.1'
+gem 'spree', '~> 0.70.5'
 
 gem 'deface', '~> 0.7.1'
 
@@ -35,7 +35,7 @@ gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-w
 #gem "spree_paypal_website_standard", :path => "/home/tomek/rails_apps/spree_ext/spree-pp-website-standard"
 
 # spree templates and themes
-gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git'
+gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git', :branch => '0-70-stable'
 gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
 
 # spree analytics
