@@ -1,0 +1,50 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li>
+      <% if(@last_started_timetracking) %>
+        You have an open Tracking, started <%= distance_of_time_in_words_to_now(@last_started_timetracking.started_at) %> ago.
+      <% else %>
+        You have no open Tracking, start one.
+      <% end %>
+    </li>
+    <li>
+      <% if(@last_started_timetracking) %>
+        <%= form_for [:admin, @last_started_timetracking] do |f| %>
+          <%= f.hidden_field :finished_client_ip, :value => request.remote_ip.to_s %>
+          <%= button t('actions.finish') %>
+        <% end %>
+      <% else %>
+        <%= form_for [:admin, Timetracking.new] do |f| %>
+          <%= f.hidden_field :started_client_ip, :value => request.remote_ip.to_s %>
+          <%= button t('actions.start') %>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1><%= t(:timetrackings) %></h1>
+
+<table class="index">
+  <thead>
+    <tr>
+      <th><%= t(:person) %></th>
+      <th><%= t(:client_ip) %></th>
+      <th><%= t(:logged_time) %></th>
+      <th><%= t(:hours_worked) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @timetrackings.each do |timetracking| %>
+      <tr id="<%= dom_id timetracking %>">
+        <td><%= timetracking.user.email %></td>
+        <td><%= timetracking.client_ip %></td>
+        <td><%= timetracking.logged_time %></td>
+        <td><%= timetracking.time_worked_array[0] %>h
+            <%= timetracking.time_worked_array[1] %>m
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

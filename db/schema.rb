@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120405131052) do
+ActiveRecord::Schema.define(:version => 20120407144123) do
 
   create_table "activators", :force => true do |t|
     t.string   "description"
@@ -559,6 +559,16 @@ ActiveRecord::Schema.define(:version => 20120405131052) do
   add_index "taxons", ["parent_id"], :name => "index_taxons_on_parent_id"
   add_index "taxons", ["permalink"], :name => "index_taxons_on_permalink"
   add_index "taxons", ["taxonomy_id"], :name => "index_taxons_on_taxonomy_id"
+
+  create_table "timetrackings", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "started_client_ip"
+    t.string   "finished_client_ip"
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"
