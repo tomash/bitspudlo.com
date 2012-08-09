@@ -1,0 +1,4 @@
+<% unless params[:controller] == 'products' && params[:action] == 'show' ||  ['orders', 'checkout'].include?(params[:controller]) %>
+  <div class="m-social-fb--right"><%= render :partial => 'shared/fb' %></div>
+<% end %>
+

@@ -44,10 +44,19 @@ body {
 
 #wrapper {
   background: none;
+  width: 1200px;
+}
+
+body#product-details #wrapper{
+  width: 1090px;
 }
 
 body.one-col {
   background-repeat: no-repeat;
+}
+
+body.one-col #content {
+  width: 850px;
 }
 
 body.two-col #wrapper {
@@ -93,6 +102,15 @@ ul#articles-bar li {
   text-decoration: underline;
 }
 
+#product-description{ width: 250px; }
+
+#taxon-crumbs{ width: 260px; }
+
+#cart #wrapper, #default #wrapper{ width: 850px; }
+
+#default.two-col #wrapper { width: 1165px }
+
+
 div#sidebar{
   margin-right:12px;
 }
@@ -121,4 +139,3 @@ div#fb {
 div#gplus {
   width:150px;
 }
-

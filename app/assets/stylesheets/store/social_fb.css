@@ -1,0 +1,17 @@
+.m-social-fb--right {
+  width: 200px;
+  float: left;
+  border-left: 1px solid #EEE;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+
+#default .m-social-fb--right { margin-left: -10px }
+
+.m-social-fb--left {
+  width: 200px;
+  float: left;
+  border-right: 1px solid #EEE;
+  padding-right: 20px;
+  margin-right: 10px;
+}
