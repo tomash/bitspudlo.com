@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake', '~> 0.8.7'
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.6'
 gem 'mysql2', '~> 0.3.6'
 
 # Use unicorn as the web server
@@ -19,7 +19,7 @@ gem 'capistrano-ext'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # spree-related gems:
-gem 'spree', '~> 0.70.5'
+gem 'spree', '~> 0.70.7'
 
 gem 'deface', '~> 0.7.1'
 
