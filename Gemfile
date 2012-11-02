@@ -36,7 +36,7 @@ gem "spree_paypal_website_standard", :git => "git://github.com/tomash/spree-pp-w
 
 # spree templates and themes
 gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git', :branch => '0-70-stable'
-gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
+#gem 'spree_mobile_views', :git => 'git://github.com/romul/spree_mobile_views.git'
 
 # spree analytics
 gem 'spree_analytics', :path => "./vendor/spree_analytics"

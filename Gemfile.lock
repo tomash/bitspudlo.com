@@ -18,13 +18,6 @@ GIT
       spree_core (>= 0.50.0)
 
 GIT
-  remote: git://github.com/romul/spree_mobile_views.git
-  revision: 1fb59161ef265346696fbe1555d3303c4a5d4a4a
-  specs:
-    spree_mobile_views (0.50.2)
-      spree_core (>= 0.50.0)
-
-GIT
   remote: git://github.com/spree/spree_blue_theme.git
   revision: b4ff96284a7374ddb86fa972c0db4af1c0e663cd
   branch: 0-70-stable
@@ -326,7 +319,6 @@ DEPENDENCIES
   spree (~> 0.70.7)
   spree_analytics!
   spree_blue_theme!
-  spree_mobile_views!
   spree_paypal_website_standard!
   therubyracer
   thin
