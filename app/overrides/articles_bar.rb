@@ -6,7 +6,7 @@ Deface::Override.new(:virtual_path  => "layouts/spree_application",
         <li><%= link_to "Contact", "/contact" %></li>
         <li>currency: 
           <%= link_to "PLN", "/currency/PLN" %>
-          <%= link_to "EUR", "/currency/EUR" %>
+          <%#= link_to "EUR", "/currency/EUR" %>
           <%= link_to "USD", "/currency/USD" %>
         </li>
       </ul>
