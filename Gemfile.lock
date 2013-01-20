@@ -71,7 +71,7 @@ PATH
       kaminari (>= 0.12.4)
       meta_search (= 1.1.1)
       nested_set (= 1.6.8)
-      paperclip (= 2.5.0)
+      paperclip (>= 2.5.0)
       rails (= 3.1.10)
       rd_find_by_param (= 0.1.1)
       rd_resource_controller
@@ -157,7 +157,7 @@ GEM
     highline (1.6.2)
     hike (1.2.1)
     i18n (0.6.1)
-    jquery-rails (2.1.4)
+    jquery-rails (2.2.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
@@ -194,10 +194,11 @@ GEM
     paper_trail (2.6.3)
       activerecord (~> 3.0)
       railties (~> 3.0)
-    paperclip (2.5.0)
-      activerecord (>= 2.3.0)
-      activesupport (>= 2.3.2)
-      cocaine (>= 0.0.2)
+    paperclip (3.3.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.4.0)
       mime-types
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -316,6 +317,7 @@ DEPENDENCIES
   multi_currencies!
   mysql2 (~> 0.3.6)
   nokogiri
+  paperclip (~> 3.3.1)
   rails (= 3.1.10)
   rake (~> 0.8.7)
   rspec-rails

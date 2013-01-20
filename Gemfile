@@ -21,6 +21,7 @@ gem 'capistrano-ext'
 # spree-related gems:
 gem 'spree', '~> 0.70.7'
 gem 'spree_core', :path => 'vendor/gems/spree_core-0.70.7' 
+gem 'paperclip', '~> 3.3.1'
 
 
 gem 'deface', '~> 0.7.1'
