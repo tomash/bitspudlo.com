@@ -18,6 +18,8 @@ gem 'capistrano-ext'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
+gem 'jquery-rails', '2.1.4'
+
 # spree-related gems:
 gem 'spree', '~> 0.70.7'
 gem 'spree_core', :path => 'vendor/gems/spree_core-0.70.7' 
