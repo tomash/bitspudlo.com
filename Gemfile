@@ -4,27 +4,18 @@ gem 'rake', '~> 0.8.7'
 gem 'rails', '3.1.10'
 gem 'mysql2', '~> 0.3.6'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-gem 'thin'
+# gem 'thin'
 
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'capistrano-ext'
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
 gem 'jquery-rails', '2.1.4'
 
 # spree-related gems:
 gem 'spree', '~> 0.70.7'
-gem 'spree_core', :path => 'vendor/gems/spree_core-0.70.7' 
+gem 'spree_core', :path => 'vendor/gems/spree_core-0.70.7'
 gem 'paperclip', '~> 3.3.1'
-
 
 gem 'deface', '~> 0.7.1'
 
