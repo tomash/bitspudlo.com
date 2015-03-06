@@ -7,6 +7,16 @@ GIT
       builder
 
 GIT
+  remote: git://github.com/globalize/globalize.git
+  revision: e4f33283bb68de68352eb22b7597e8f6cfce27f7
+  ref: e4f33283bb68de68352eb22b7597e8f6cfce27f7
+  specs:
+    globalize3 (0.2.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      paper_trail (~> 2)
+
+GIT
   remote: git://github.com/pronix/spree-multi-currency.git
   revision: e17e5c4728c16371c3e0d468361ea22a0d423cba
   ref: e17e5c
@@ -23,15 +33,6 @@ GIT
   branch: 0-70-stable
   specs:
     spree_blue_theme (0.1.0)
-
-GIT
-  remote: git://github.com/svenfuchs/globalize3.git
-  revision: e4f33283bb68de68352eb22b7597e8f6cfce27f7
-  specs:
-    globalize3 (0.2.0)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      paper_trail (~> 2)
 
 GIT
   remote: git://github.com/tomash/globalize-spree.git
@@ -189,7 +190,7 @@ GEM
       net-ssh (>= 1.99.1)
     nokogiri (1.5.5)
     orm_adapter (0.0.7)
-    paper_trail (2.6.3)
+    paper_trail (2.7.2)
       activerecord (~> 3.0)
       railties (~> 3.0)
     paperclip (3.3.1)

@@ -20,7 +20,7 @@ gem 'paperclip', '~> 3.3.1'
 gem 'deface', '~> 0.7.1'
 
 gem "i18n"
-gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git'
+gem "globalize3", :git => 'git://github.com/globalize/globalize.git', :ref => 'e4f33283bb68de68352eb22b7597e8f6cfce27f7'
 gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git', :ref => '8fcf2af' 
 #gem "globalize_spree", :path => "/home/tomek/rails_apps/spree_ext/globalize_spree"
 
