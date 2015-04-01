@@ -1,16 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rake', '~> 0.8.7'
 gem 'rails', '3.1.10'
 gem 'mysql2', '~> 0.3.6'
 
-# gem 'thin'
-
-# Deploy with Capistrano
-gem 'capistrano'
-gem 'capistrano-ext'
-
 gem 'jquery-rails', '2.1.4'
+
+
+# Use unicorn as the app server
+gem 'unicorn', '~> 4.8.3'
+
+# Use Capistrano for deployment
+gem 'capistrano',  '~> 3.2.1'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rails', '~> 1.1.2'
+gem 'capistrano3-unicorn'
+
 
 # spree-related gems:
 gem 'spree', '~> 0.70.7'
@@ -37,16 +42,15 @@ gem 'spree_blue_theme', :git => 'git://github.com/spree/spree_blue_theme.git', :
 # spree analytics
 gem 'spree_analytics', :path => "./vendor/spree_analytics"
 
+# asset gems
+gem 'therubyracer'
 group :assets do
   gem 'sass-rails', "~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
   gem 'uglifier'
 end
 
-group :production do
-  gem 'therubyracer'
-end
-
+# test gems
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl'
