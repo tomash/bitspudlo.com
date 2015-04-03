@@ -29,14 +29,14 @@ body {
     linear,
     left bottom,
     left top,
-    color-stop(0.77, rgb(255,255,255)),
-    color-stop(0.8, rgb(204,51,51)),
+    color-stop(0.87, rgb(255,255,255)),
+    color-stop(0.90, rgb(204,51,51)),
     color-stop(0.99, rgb(112,1,1))
   );
   background-image: -moz-linear-gradient(
       center bottom,
-      rgb(255,255,255) 77%,
-      rgb(204,51,51) 80%,
+      rgb(255,255,255) 87%,
+      rgb(204,51,51) 90%,
       rgb(112,1,1) 99%
   );
   min-height: 400px;
@@ -45,6 +45,11 @@ body {
 #wrapper {
   background: none;
   width: 1200px;
+}
+
+#wrapper #content {
+  float: left;
+  width: 730px;
 }
 
 body#product-details #wrapper{
